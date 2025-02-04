@@ -1,0 +1,206 @@
+/********** Template CSS **********/
+:root {
+    --primary: #D5DF28;
+    --secondary: #3367B7;
+    --light: #FAFAFB;
+    --dark: #12141D;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.my-6 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.py-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+p {
+	font-family: 'Noto Sans HK', sans-serif;
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: #000000;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+	background-color: var(--secondary);
+	border: 0px;
+    color: #FFFFFF;
+	font-family: 'Noto Sans HK', sans-serif;
+	font-weight: 900;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+/*** Header ***/
+#home {
+	width: 100%;
+	background: url(../img/BG_1-100.jpg); top center no-repeat;
+	background-size: cover;
+}
+
+.home-container {
+	position: relative;
+	z-index: 1;
+}
+
+/*** Title Bar ***/
+#bar .container-fluid{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.bar-content {
+	position: absolute;
+	background: url(../img/BG_3-100.jpg); top center no-repeat;
+	background-size: cover;
+	width: 45%;
+	left: 98%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.bar-logo-content {
+	width: 8%;
+	left: 100%;
+	opacity: 0%;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+}
+
+/*** About ***/
+
+#about{
+	background: url(../img/p23.png); top left no-repeat;
+	background-size: cover;
+}
+
+/*** Skills ***/
+
+.word-highlight-primary{
+	display: inline-block;
+	text-align:center;
+	vertical-align:middle;
+	border-radius: 50px;
+	padding: 0.8rem 3rem 0.8rem 3rem;
+	background-color: var(--primary);
+	font-family: 'Noto Sans HK', sans-serif;
+	font-weight: 900;
+	font-size: 2rem;
+}
+
+.word-highlight-secondary{
+	display: inline-block;
+	text-align:center;
+	vertical-align:middle;
+	border-radius: 50px;
+	padding: 0.8rem 3rem 0.8rem 3rem;
+	background-color: var(--secondary);
+	color: #FFFFFF;
+	font-family: 'Noto Sans HK', sans-serif;
+	font-weight: 900;
+	font-size: 2rem;
+}
+
+.word-highlight-gold{
+	display: inline;
+	text-align:center;
+	vertical-align:middle;
+	border-radius: 50px;
+	padding: 0.8rem 3rem 0.8rem 3rem;
+	background:linear-gradient(to right, #d7b64c 10%, #fffdca 50%, #b68b2e 90%);
+	font-family: 'Noto Sans HK', sans-serif;
+	font-weight: 900;
+	font-size: 2rem;
+}
+
+.bold-border-primary{
+	position:relative;
+	border: 0.25rem solid var(--primary);
+	background: #FFFFFF
+}
+
+.bold-border-secondary{
+	position:relative;
+	border: 0.25rem solid var(--secondary);
+	background: #FFFFFF
+}
+
+.border-label{
+	position: absolute;
+	top: -2.5rem;
+	left: -3rem;
+}
+
+
+@media (max-width: 991px) {
+	.word-highlight-gold,
+	.word-highlight-primary,
+	.word-highlight-secondary{
+		font-size: 1.0rem;
+	}
+	
+	p{
+		font-size:0.8rem;
+	}
+}
